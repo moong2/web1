@@ -3,6 +3,51 @@
 <head>
     <title>나</title>
     <meta charset = "utf-8">
+    <style>
+      h1{
+        border-bottom:1px solid gray;
+        font-size:45px;
+        padding:20px;
+        display:block;
+        text-align:center;
+        margin:0;
+      }
+      a{
+        color:blue;
+        text-decoration:none;
+      }
+      #active{
+        color:red;
+      }
+      #grid ol{
+        border-right:1px solid gray;
+        width:100px;
+        margin:0;
+        padding:20px;
+        padding-left:33px;
+      }
+      body{
+        margin:0;
+      }
+      #grid{
+        display:grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #article{
+        padding-left:25px;
+      }
+      @media(max-width:800px){
+        #grid{
+          display:block;
+        }
+        #grid ol{
+          border-right:none;
+        }
+        h1{
+          border-bottom:none;
+        }
+      }
+    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179309432-1"></script>
 <script>
@@ -16,11 +61,15 @@
 </head>
 <body>
     <h1><a href = "index.html">소개</h1></a>
-    <ol>
-      <li><a href = "1.html">누구</li></a>
-      <li><a href = "2.html">어디</li></a>
-    </ol>
-    <h2>누구</h2>
-    <img src = "pika.png" width = "30%"><br>
-      <a href = "https://www.instagram.com/mg._.2/">저</a>는 <strong>세종대학교 <u>소프트웨어학과</u></strong>입니다.
+    <div id = "grid">
+      <ol>
+        <li><a href = "1.html" id = "active">누구</li></a>
+        <li><a href = "2.html">어디</li></a>
+      </ol>
+      <div id = "article">
+        <h2>누구</h2>
+        <img src = "pika.png" width = "30%"><br>
+          <a href = "https://www.instagram.com/mg._.2/">저</a>는 <strong>세종대학교 소프트웨어학과</strong>입니다.
+      </div>
+    </div>
 </body>
